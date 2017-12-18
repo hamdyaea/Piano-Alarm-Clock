@@ -33,7 +33,7 @@ sudo python3 -m pip install --upgrade easygui
 
 ## How to launch this software :  
 
-From windows launche it as administrator
+From windows launche the terminal as administrator
 
 ```sh
 python3 alarmPiano.py
