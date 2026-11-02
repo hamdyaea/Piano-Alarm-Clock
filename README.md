@@ -1,46 +1,14 @@
 # Piano Alarm Clock
 
-## What's this software ?  
+**Developer:** Hamdy Abou El Anein  
+**Contact:** info@daylightlinux.ch  
+**License:** GPL v3 (see LICENSE).
 
-This is a Piano Alarm Clock who play a radio piano stream at a defined clock time
-
-## Sound stream informations 
-
-1) The source stream is writed in sound.txt
-2) The default piano radio stream is from the web radio ABC piano : abcpiano.radio.fr  
-3) You can add some youtube video links to the sound.txt and the software will select it randomly
-
-
-
-
-![Screenshot](screenshot.png)  
-
-
-
-
-## What you need to make it work :  
-
-This game is made for Python 3.  
-
-Install all the packages for : Python 3.  
-
-easygui at least version 0.98  
-
-```sh
-sudo python3 -m pip install --upgrade easygui  
-```  
-
-
-## How to launch this software :  
-
-From windows launche the terminal as administrator
+A modern Python 3/Tkinter local alarm clock. The alarm accepts a 24-hour HH:MM time, schedules the next occurrence, and uses the desktop bell plus a message. It replaces the EasyGUI busy-wait loop and does **not automatically open YouTube links or external websites**.
 
 ```sh
 python3 alarmPiano.py
-```  
+python3 -m unittest discover -s tests -v
+```
 
-
-## Developer - Author  
-
-Hamdy Abou El Anein  
-
+Keep the application running for the alarm to fire. Computer sleep, muted desktop bells and daylight-saving changes may affect reliability. This is not a critical alert system. Original version: [old branch](https://github.com/hamdyaea/Piano-Alarm-Clock/tree/old).
