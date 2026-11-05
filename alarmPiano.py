@@ -5,6 +5,7 @@
 """Local Tkinter alarm clock without busy-wait or automatic web browsing."""
 from __future__ import annotations
 from datetime import datetime, timedelta
+from pathlib import Path
 import tkinter as tk
 from tkinter import messagebox, ttk
 
@@ -24,12 +25,15 @@ def seconds_until_alarm(value: str, now: datetime | None = None) -> float:
 def main() -> None:
     root = tk.Tk()
     root.title("Piano Alarm Clock")
-    root.geometry("410x230")
     frame = ttk.Frame(root, padding=20)
     frame.pack(fill="both", expand=True)
     time_var = tk.StringVar(value="08:30")
     status = tk.StringVar(value="Set a local alarm")
     target = None
+    artwork = tk.PhotoImage(file=str(Path(__file__).resolve().parent / "images/piano-ui.png"))
+    illustration = tk.Label(frame, image=artwork)
+    illustration.image = artwork
+    illustration.pack()
     ttk.Label(frame, text="Alarm time (HH:MM, 24-hour)").pack(pady=8)
     ttk.Entry(frame, textvariable=time_var, width=12).pack()
     ttk.Label(frame, textvariable=status).pack(pady=12)
